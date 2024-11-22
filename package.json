@@ -9,7 +9,7 @@
     "buildonly": "graph build",
     "codegen": "graph codegen --output-dir src/types/",
     "create-lux": "graph create lux/uniswap-v2 --node https://graph.lux.network",
-    "deploy-lux": "RUST_LOG=debug graph deploy lux/uniswap-v2 --ipfs https://ipfs.lux.network --node http://192.168.1.165:8020",
+    "deploy-lux": "RUST_LOG=debug graph deploy lux/uniswap-v2 --ipfs https://ipfs.lux.network --node https://${GRAPH_ADMIN_USER}:${GRAPH_ADMIN_PASS}@graph-admin.lux.network",
     "watch-local": "graph deploy lux/uniswap-v2 --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
   },
   "devDependencies": {
@@ -18,6 +18,7 @@
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "@uniswap/eslint-config": "^1.2.0",
+    "dotenv-cli": "^7.4.4",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^6.1.0",
     "npm-run-all": "^4.1.5",
