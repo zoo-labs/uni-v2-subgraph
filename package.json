@@ -1,16 +1,16 @@
 {
-  "name": "@luxfi/uniswap-v2-subgraph",
+  "name": "@zoolabs/uniswap-v2-subgraph",
   "version": "1.0.0",
-  "repository": "https://github.com/luxfi/uni-v2-subgraph",
+  "repository": "https://github.com/zoo-labs/uni-v2-subgraph",
   "license": "GPL-3.0-or-later",
   "scripts": {
     "lint": "eslint . --ext .ts --fix",
     "build": "run-s codegen && graph build",
     "buildonly": "graph build",
     "codegen": "graph codegen --output-dir src/types/",
-    "create-lux": "graph create lux/uniswap-v2 --node https://graph.lux.network",
-    "deploy-lux": "RUST_LOG=debug graph deploy lux/uniswap-v2 --ipfs https://ipfs.lux.network --node https://${GRAPH_ADMIN_USER}:${GRAPH_ADMIN_PASS}@graph-admin.lux.network",
-    "watch-local": "graph deploy lux/uniswap-v2 --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+    "create-zoo": "graph create zoo/uniswap-v2 --node https://graph.zoo.network",
+    "deploy-zoo": "RUST_LOG=debug graph deploy zoo/uniswap-v2 --ipfs https://ipfs.lux.network --node https://${GRAPH_ADMIN_USER}:${GRAPH_ADMIN_PASS}@graph-admin.zoo.network",
+    "watch-local": "graph deploy zoo/uniswap-v2 --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.64.1",
